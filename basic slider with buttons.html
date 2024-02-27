@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .slider{
+            appearance: slider-vertical;
+            width: 30px;
+            height: 90vh;
+        }
+        input[type=range]{
+            pointer-events: none;
+        }
+        .column{
+            float: left;
+        }
+        .left{
+            width: 100px;
+            border-right: 1px solid lightgray;
+        }
+        .right{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="row">
+            <div class="column left">
+                <table>
+                    <tr>
+                        <td> 300</td>
+                        <td> 500</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="range" min="-500" max="300" class="slider" id="range1" list="vals1" orient="vertical" step="1">
+                            <datalist id="vals1">
+                                <option value="-500" label="-500"></option>
+                                <option value="0"></option>
+                                <option value="300"></option>
+                            </datalist>
+                        </td>
+                        <td>
+                            <input type="range" min="-300" max="500" class="slider" id="range2" list="vals2" orient="vertical" step="1">
+                            <datalist id="vals2">
+                                <option value="-300"></option>
+                                <option value="0"></option>
+                                <option value="500"></option>
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>-500</td>
+                        <td>-300</td>
+                    </tr>
+                </table>
+            </div>
+            <div class=" right">
+                <table>
+                    <tr>
+                        <td><button>home</button></td>
+                        <td><button>a</button></td>
+                        <td><button>b</button></td>
+                        <td><button>c</button></td>
+                        <td><button>d</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        var range1 = document.getElementById("range1");
+        var range2 = document.getElementById("range2");
+        range1.value = 0;
+        range2.value = 0;
+        
+    </script>
+</body>
+</html>
